@@ -63,30 +63,42 @@ export const DownloadModal: React.FC<Props> = ({
     []
   );
 
+  const fetchGithubReleases = async (): Promise<void> => {
+    try {
+      const res = await fetch("https://api.github.com/repos/RedPandaProjects/STALKERonUE/releases");
+      if (!res.ok) {
+        throw new Error("An error occurred while fetching the data.");
+      }
+      const releases = await res.json();
+      const transformedData: Version[] = releases.map((release: any) => ({
+        version: release.tag_name.replace(/^build-/, ""),
+        groups: [
+          {
+            files: release.assets.map((asset: any) => ({
+              name: asset.name,
+              description: release.name,
+              size: asset.size,
+              url: asset.browser_download_url,
+              additional: { icon: "", external_link: true }
+            }))
+          }
+        ]
+      }));
+      setData(transformedData);
+      setIsLoading(false);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(error.message);
+        setIsLoading(false);
+      }
+    }
+  };
+
   useEffect(() => {
     let isMounted = true;
 
-    const fetchData = async (): Promise<void> => {
-      try {
-        const res = await fetch("/api/downloads/editor");
-        if (!res.ok) {
-          throw new Error("An error occurred while fetching the data.");
-        }
-        const json = await res.json();
-        if (isMounted) {
-          setData(json.data);
-          setIsLoading(false);
-        }
-      } catch (error: unknown) {
-        if (error instanceof Error && isMounted) {
-          setError(error.message);
-          setIsLoading(false);
-        }
-      }
-    };
-
-    if (!data) {
-      fetchData();
+    if (!data && isMounted) {
+      fetchGithubReleases();
     }
 
     return () => {
