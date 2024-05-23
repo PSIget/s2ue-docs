@@ -148,7 +148,7 @@ export default function Home() {
           <OriginalStorySection />
           <DiscordSection />
           <GetEditor />
-          <BoostySection />
+          {/* <BoostySection /> */}
           <LastSection
             title={useLocalesMap(goTitle)}
             subTitle={subtitle}

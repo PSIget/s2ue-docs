@@ -1,3 +1,5 @@
+import styles from "./index.module.scss";
+
 import { FadeIn } from "../FadeIn";
 import { SectionHeader } from "../Headings";
 import { CTAButton } from "../CTAButton";
@@ -25,7 +27,7 @@ export function LastSection(props: ButtonProps | LinkProps) {
     <FadeIn
       delay={0.3}
       className={
-        "font-sans w-auto py-20 flex justify-between items-center flex-col relative px-6 gap-6"
+        `font-sans w-auto py-20 flex justify-between items-center flex-col relative px-6 gap-6 ` + styles.lastSection
       }
       section
     >

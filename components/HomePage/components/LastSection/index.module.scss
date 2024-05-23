@@ -1,0 +1,17 @@
+.lastSection {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.0625rem;
+    top: 0;
+    width: 100%;
+    color: transparent;
+    background: linear-gradient(
+      270deg,
+      rgba(241, 90, 44, 0) 0%,
+      rgb(235, 235, 235) 50%,
+      rgba(241, 90, 44, 0) 100%
+    );
+  }
+}

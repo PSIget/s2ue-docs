@@ -221,7 +221,7 @@ export default function Home() {
           />
           <XraySection />
           <DiscordSection />
-          <BoostySection />
+          {/* <BoostySection /> */}
           <LastSection
             title={useLocalesMap(goTitle)}
             subTitle={subtitle}
