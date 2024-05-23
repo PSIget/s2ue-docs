@@ -18,7 +18,7 @@ const env = {
   NEXT_PUBLIC_DISCORD_URL: "https://discord.gg/red-projects-530968529311367178",
   NEXT_PUBLIC_BOOSTY_URL: "https://boosty.to/stalker2ue",
   NEXT_PUBLIC_MODDB_URL: "https://www.moddb.com/mods/stalker2ue",
-  NEXT_PUBLIC_SOURCE_CODE_URL: "https://git.s2ue.org/RedProjects/SonUE",
+  NEXT_PUBLIC_SOURCE_CODE_URL: "https://github.com/RedPandaProjects/STALKERonUE",
   NEXT_PUBLIC_DOCS_SOURCE_CODE_URL: "https://github.com/PSIget/SonUE-Docs",
 };
 
