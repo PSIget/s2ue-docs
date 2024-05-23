@@ -2,5 +2,6 @@
   "build": "Code Build",
   "configs": "Solution Configurations",
   "change-game": "Changing Game in Editor",
-  "import-content": "Importing Content"
+  "import-content": "Importing Content",
+  "import-level": "Importing Level"
 }
