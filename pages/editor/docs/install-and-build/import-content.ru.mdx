@@ -20,14 +20,14 @@ import { Callout } from 'nextra-theme-docs'
 | S.T.A.L.K.E.R.: Clear Sky           | gamedata_cs       | rawdata_cs       |
 | S.T.A.L.K.E.R.: Call of Pripyat     | gamedata          | rawdata          |
 
-Таблица с названием папок, куда следует поместить ресурсы в зависимости от нужной игры. Папка `rawdata` находится по пути `{src}/Source/XRayEngine`
+Таблица с названием папок, куда следует поместить ресурсы в зависимости от нужной игры.
 
 ![Select Game](./import-content.ru/img/gamedata-dir.png)
 
 **Примечание**:
 * Изначально папки gamedata для всех трёх частей есть в git'е, но в них только скрипты и конфиги ИХ УДАЛЯТЬ ИЛИ ЗАМЕНЯТЬ НЕЛЬЗЯ
 * В папке rawdata лежат исходники контента для X-Ray SDK. В них необходимо переместить папки `уровней` и `objects`
-* В папке gamedata необходимо переместить всё остальное
+* В папку gamedata необходимо переместить всё остальное
 
 ## Импорт в Unreal Engine
 
@@ -37,10 +37,12 @@ import { Callout } from 'nextra-theme-docs'
 
 ![Import Content](./import-content.ru/img/import.png)
 
-По очерёдности вызовете три команды импорта:
-- Import UI Textures
-- Import Physical Materials
-- Import Meshes
+По очерёдности вызовете все команды импорта:
+- 1. Import Textures > Import All Textures
+- 2. Import Physical Materials
+- 3. Import Meshes
+- 4. Import Particles
+- 5. Import Sounds
 
 После этого можно создать тестовую локацию и запустить PIE
 
