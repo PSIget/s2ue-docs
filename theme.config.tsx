@@ -29,28 +29,7 @@ function getCategory(pathname: string): string {
 /** @type {import('nextra-theme-docs').DocsThemeConfig} */
 const themeConfig: import("nextra-theme-docs").DocsThemeConfig = {
   project: {
-    link: process.env.NEXT_PUBLIC_SOURCE_CODE_URL,
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        fill="none"
-        viewBox="0 0 48 48"
-      >
-        <path
-          fill="currentColor"
-          d="M13 17c-3.308 0-6-2.692-6-6s2.692-6 6-6 6 2.692 6 6-2.692 6-6 6Zm22 0c-3.308 0-6-2.692-6-6s2.692-6 6-6 6 2.692 6 6-2.692 6-6 6ZM13 43c-3.308 0-6-2.692-6-6s2.692-6 6-6 6 2.692 6 6-2.692 6-6 6Z"
-        />
-        <path
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="4"
-          d="M13 37V11m22 0v5.5c0 15.136-22 6.591-22 15"
-        />
-      </svg>
-    ),
+    link: process.env.NEXT_PUBLIC_SOURCE_CODE_URL
   },
   docsRepositoryBase:
     process.env.NEXT_PUBLIC_DOCS_SOURCE_CODE_URL + "/tree/main",
